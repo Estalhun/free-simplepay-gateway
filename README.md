@@ -21,7 +21,7 @@
 
 [Oldalunkon](https://simplepay.conedevelopment.com/) számos leírást készítettünk a bővítmény megfelelő használatáról, funkcióiról, esetleges korlátairól.
 
-Támogatásért keresd fel az [ide kapcsolódó aloldalunkat](https://cone-simplepay.netlify.app/tamogatas/), vagy írj nekünk e-mailt a support@conedevelopment.com címre.
+Támogatásért keresd fel az [ide kapcsolódó aloldalunkat](https://simplepay.conedevelopment.com/tamogatas/), vagy írj nekünk e-mailt a support@conedevelopment.com címre.
 
 ## Frissítések
 

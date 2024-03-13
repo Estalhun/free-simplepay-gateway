@@ -38,6 +38,7 @@ class Plugin
             _e('The OTP SimplePay Gateway plugin V3 has been released. This version will not get any updates in the future.', 'cone-simplepay');
             echo '&nbsp;';
             _e('Get your license:', 'cone-simplepay');
+            echo '&nbsp;';
             echo '<a href="https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce" target="_blank">https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce</a>.';
             echo '&nbsp;';
             _e('If you have any questions contact us at: ', 'cone-simplepay');
@@ -51,6 +52,7 @@ class Plugin
             _e('The OTP SimplePay Gateway plugin V3 has been released. This version will not get any updates in the future.', 'cone-simplepay');
             echo '&nbsp;';
             _e('Get your license:', 'cone-simplepay');
+            echo '&nbsp;';
             echo '<a href="https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce" target="_blank">https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce</a>.';
             echo '&nbsp;';
             _e('If you have any questions contact us at: ', 'cone-simplepay');

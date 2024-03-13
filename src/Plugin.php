@@ -12,7 +12,7 @@ class Plugin
      *
      * @var string
      */
-    public const VERSION = '2.9.0';
+    public const VERSION = '2.9.1';
 
     /**
      * The plugin slug.
@@ -38,7 +38,10 @@ class Plugin
             _e('The OTP SimplePay Gateway plugin V3 has been released. This version will not get any updates in the future.', 'cone-simplepay');
             echo '&nbsp;';
             _e('Get your license:', 'cone-simplepay');
-            echo '<a href="https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce" target="_blank">https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce</a>';
+            echo '<a href="https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce" target="_blank">https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce</a>.';
+            echo '&nbsp;';
+            _e('If you have any questions contact us at: ', 'cone-simplepay');
+            echo '<a href="mailto:support@conedevelopment.com">support@conedevelopment.com</a>.';
             echo '</p></div>';
         });
 
@@ -48,7 +51,10 @@ class Plugin
             _e('The OTP SimplePay Gateway plugin V3 has been released. This version will not get any updates in the future.', 'cone-simplepay');
             echo '&nbsp;';
             _e('Get your license:', 'cone-simplepay');
-            echo '<a href="https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce" target="_blank">https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce</a>';
+            echo '<a href="https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce" target="_blank">https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce</a>.';
+            echo '&nbsp;';
+            _e('If you have any questions contact us at: ', 'cone-simplepay');
+            echo '<a href="mailto:support@conedevelopment.com">support@conedevelopment.com</a>.';
             echo '</p></div></td></tr>';
         });
 

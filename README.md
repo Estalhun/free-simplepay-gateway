@@ -17,6 +17,11 @@
 > [!IMPORTANT]
 > Jelenleg a bővítmény harmadik verziója fut, ami az előzőektől ellentétben már fizetős. Ha szeretnéd megvásárolni, úgy látogasd meg az [áruház oldalunkat](https://shop.conedevelopment.com/).
 
+## Elérhető bővítményeink
+
+- [SimplePay fizetési kapu WooCommerce-hez](https://simplepay.conedevelopment.com/)
+- [Barion fizetési kapu WooCommerce-hez](https://barion.conedevelopment.com/)
+
 ## Támogatás
 
 [Oldalunkon](https://simplepay.conedevelopment.com/) számos leírást készítettünk a bővítmény megfelelő használatáról, funkcióiról, esetleges korlátairól.

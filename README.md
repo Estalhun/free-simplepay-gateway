@@ -16,7 +16,7 @@
 
 > [!IMPORTANT]
 > Ennek a bővítménynek a harmadik verziója az előzőektől ellentétben már fizetős. Ha szeretnéd megvásárolni, úgy látogasd meg a Cone Development [áruház oldalát](https://shop.conedevelopment.com/).
-> Vagy segíts ennek az ingyenen változatnak a fejlesztésében.
+> <b>Vagy segíts ennek az ingyenen változatnak a fejlesztésében.</b>
 
 ## Támogatás
 

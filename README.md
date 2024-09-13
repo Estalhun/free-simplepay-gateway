@@ -16,16 +16,14 @@
 
 > [!IMPORTANT]
 > Jelenleg a bővítmény harmadik verziója fut, ami az előzőektől ellentétben már fizetős. Ha szeretnéd megvásárolni, úgy látogasd meg az [áruház oldalunkat](https://shop.conedevelopment.com/).
+> Vagy segíts ennek az ingyenen változatnak a fejlesztésében.
 
 ## Támogatás
 
+Támogatás nyilvánvalóan a fizetős bővítményhez jár, amit itt találsz:
 [Oldalunkon](https://simplepay.conedevelopment.com/) számos leírást készítettünk a bővítmény megfelelő használatáról, funkcióiról, esetleges korlátairól.
 
 Támogatásért keresd fel az [ide kapcsolódó aloldalunkat](https://simplepay.conedevelopment.com/tamogatas/), vagy írj nekünk e-mailt a support@conedevelopment.com címre.
-
-## Frissítések
-
-Telepítés után a bővítmény automatikusan ellenőrizni a frissítéseket, amelyek ugyanúgy telepíthetők, mint bármely WordPress bővítmény frissítés. Az új kiadások után kérünk vedd figyelembe, hogy lehetséges egy-két órás átfutási idő.
 
 ## Elérhető bővítményeink
 
@@ -34,4 +32,5 @@ Telepítés után a bővítmény automatikusan ellenőrizni a frissítéseket, a
 
 ## Rólunk
 
-A bővítményt a [Cone](https://conedevelopment.com/hu/) fejleszti. Webalkalmazásokat és weboldalakat készítünk kicsitől a nagyig Laravel és WordPress segítségével.
+Eddig az ingyenes bővítményt a [Cone](https://conedevelopment.com/hu/) fejlesztette.
+Segíts a fejlesztésben, hogy fennmaradjon az ingyenes változat!

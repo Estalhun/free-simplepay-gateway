@@ -15,7 +15,7 @@
 **Bővítményünk OTP SimplePay fizetési kaput biztosít WooCommerce (WordPress) áruházak részére.**
 
 > [!IMPORTANT]
-> Jelenleg a bővítmény harmadik verziója fut, ami az előzőektől ellentétben már fizetős. Ha szeretnéd megvásárolni, úgy látogasd meg az [áruház oldalunkat](https://shop.conedevelopment.com/).
+> Ennek a bővítménynek a harmadik verziója az előzőektől ellentétben már fizetős. Ha szeretnéd megvásárolni, úgy látogasd meg az [áruház oldalunkat](https://shop.conedevelopment.com/).
 > Vagy segíts ennek az ingyenen változatnak a fejlesztésében.
 
 ## Támogatás
@@ -24,11 +24,6 @@ Támogatás nyilvánvalóan a fizetős bővítményhez jár, amit itt találsz:
 [Oldalunkon](https://simplepay.conedevelopment.com/) számos leírást készítettünk a bővítmény megfelelő használatáról, funkcióiról, esetleges korlátairól.
 
 Támogatásért keresd fel az [ide kapcsolódó aloldalunkat](https://simplepay.conedevelopment.com/tamogatas/), vagy írj nekünk e-mailt a support@conedevelopment.com címre.
-
-## Elérhető bővítményeink
-
-- [SimplePay fizetési kapu WooCommerce-hez](https://simplepay.conedevelopment.com/)
-- [Barion fizetési kapu WooCommerce-hez](https://barion.conedevelopment.com/)
 
 ## Rólunk
 

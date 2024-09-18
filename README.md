@@ -20,8 +20,7 @@
 
 ## Támogatás
 
-Támogatás nyilvánvalóan a fizetős bővítményhez jár, amit itt találsz:
-[Oldalunkon](https://simplepay.conedevelopment.com/)
+Támogatás nyilvánvalóan a fizetős bővítményhez jár, amit a Code Development [oldalán](https://simplepay.conedevelopment.com/) találsz.
 
 Támogatásért keresd fel az [ide kapcsolódó aloldalt](https://simplepay.conedevelopment.com/tamogatas/).
 

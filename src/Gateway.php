@@ -140,17 +140,8 @@ class Gateway extends WC_Payment_Gateway
         }
 
         if (! $order instanceof WC_Order) {
-            $orders = wc_get_orders([
-                'limit' => 1,
-                'meta_query' => [
-                    [
-                        'key' => '_order_number_formatted',
-                        'value' => preg_replace('/^wc-/', '', $orderId),
-                    ],
-                ],
-            ]);
-
-            $order = $orders[0] ?? false;
+            
+            $order = false;
        }
 
        return $order;

@@ -12,7 +12,7 @@ class Plugin
      *
      * @var string
      */
-    public const VERSION = '2.9.1';
+    public const VERSION = '2.9.2';
 
     /**
      * The plugin slug.
@@ -64,7 +64,7 @@ class Plugin
 
         Config::boot(get_option('woocommerce_simplepay-gateway_settings', []));
 
-        Updater::boot();
+        //Updater::boot();
     }
 
     /**

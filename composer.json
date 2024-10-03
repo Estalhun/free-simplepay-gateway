@@ -1,12 +1,16 @@
 {
-    "name": "conedevelopment/simplepay-gateway",
-    "description": "OTP SimplePay integration for WooCommerce (WordPress) stores.",
+    "name": "estalhun-cyone64/free-simplepay-gateway",
+    "description": "Free OTP SimplePay integration for WooCommerce (WordPress) stores.",
     "type": "wordpress-plugin",
-    "license": "MIT",
+    "license": "GPL-3.0",
     "authors": [
         {
-            "name": "Cone Development",
-            "email": "hello@conedevelopment.com"
+            "name": "Estalhun",
+            "email": "estal.hun@gmail.com"
+        },
+        {
+            "name": "Cyone64",
+            "email": "gyuris.csaba@gmail.com"
         }
     ],
     "require": {

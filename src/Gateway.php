@@ -1,19 +1,19 @@
 <?php
 
-namespace Cone\SimplePay;
+namespace FSG\SimplePay;
 
 use Automattic\WooCommerce\Blocks\Payments\Integrations\AbstractPaymentMethodType;
 use Automattic\WooCommerce\Blocks\Payments\PaymentMethodRegistry;
-use Cone\SimplePay\Handlers\IPNHandler;
-use Cone\SimplePay\Handlers\IRNHandler;
-use Cone\SimplePay\Handlers\PaymentHandler;
-use Cone\SimplePay\Payloads\PaymentPayload;
-use Cone\SimplePay\Payloads\RefundPayload;
-use Cone\SimplePay\Support\Config;
-use Cone\SimplePay\Support\Hash;
-use Cone\SimplePay\Support\Log;
-use Cone\SimplePay\Support\Request;
-use Cone\SimplePay\Support\Str;
+use FSG\SimplePay\Handlers\IPNHandler;
+use FSG\SimplePay\Handlers\IRNHandler;
+use FSG\SimplePay\Handlers\PaymentHandler;
+use FSG\SimplePay\Payloads\PaymentPayload;
+use FSG\SimplePay\Payloads\RefundPayload;
+use FSG\SimplePay\Support\Config;
+use FSG\SimplePay\Support\Hash;
+use FSG\SimplePay\Support\Log;
+use FSG\SimplePay\Support\Request;
+use FSG\SimplePay\Support\Str;
 use Exception;
 use WC_Order;
 use WC_Payment_Gateway;
@@ -118,7 +118,7 @@ class Gateway extends WC_Payment_Gateway
             $this->{$key} = $option;
         }
 
-        $this->method_description = __('OTP SimplePay Payment Gateway', 'cone-simplepay');
+        $this->method_description = __('OTP SimplePay Payment Gateway', 'free-simplepay');
 
         if (isset($this->show_icon) && $this->show_icon === 'yes') {
             $this->icon = apply_filters('cone_simplepay_icon', plugin_dir_url(__DIR__).'images/icon.svg');
@@ -168,7 +168,7 @@ class Gateway extends WC_Payment_Gateway
             $request->send();
 
             if (! $request->valid()) {
-                Log::info(sprintf(__('Request is invalid: %s', 'cone-simplepay'), $request->response('body')));
+                Log::info(sprintf(__('Request is invalid: %s', 'free-simplepay'), $request->response('body')));
 
                 return [
                     'result' => 'failure',
@@ -222,13 +222,13 @@ class Gateway extends WC_Payment_Gateway
         $order = $this->getOrder($payload['orderRef']);
 
         if (! $order instanceof WC_Order) {
-            die(__('Order not found.', 'cone-simplepay'));
+            die(__('Order not found.', 'free-simplepay'));
         }
 
         Config::setByCurrency($order->get_currency());
 
         if (! Hash::check($_SERVER['HTTP_SIGNATURE'], $input)) {
-            die(__('Invalid signature.', 'cone-simplepay'));
+            die(__('Invalid signature.', 'free-simplepay'));
         }
 
         if ((isset($payload['refundStatus']) && $payload['status'] === 'FINISHED') || $payload['status'] === 'REFUND') {

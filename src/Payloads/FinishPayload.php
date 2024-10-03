@@ -1,11 +1,11 @@
 <?php
 
-namespace Cone\SimplePay\Payloads;
+namespace FSG\SimplePay\Payloads;
 
-use Cone\SimplePay\Plugin;
-use Cone\SimplePay\Support\Config;
-use Cone\SimplePay\Support\Hash;
-use Cone\SimplePay\Support\Str;
+use FSG\SimplePay\Plugin;
+use FSG\SimplePay\Support\Config;
+use FSG\SimplePay\Support\Hash;
+use FSG\SimplePay\Support\Str;
 use WC_Order;
 
 abstract class FinishPayload
@@ -35,7 +35,7 @@ abstract class FinishPayload
             'orderRef' => Str::refFromId($order->get_order_number()),
             'currency' => $order->get_currency(),
             'sdkVersion' => 'Pine SimplePay Gateway:'.Plugin::VERSION,
-            'originalTotal' => $reserved = $order->get_meta('_cone_simplepay_two_step_payment_reserved'),
+            'originalTotal' => $reserved = $order->get_meta('_free_simplepay_two_step_payment_reserved'),
             'approveTotal' => min($reserved, $order->get_total()),
         ];
     }

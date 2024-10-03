@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.9.2 (2024-10-03)
+
+- Changed namespace from `Cone\SimplePay` to `FSG\SimplePay`
+- Changed text domain from `cone-simplepay` to `free-simplepay`
+- Fixed refund when the order is missing.
+- The update feature is temporarily disabled until the first release.
+
 https://github.com/conedevelopment/simplepay-gateway/releases
 
 ## v2.5.1

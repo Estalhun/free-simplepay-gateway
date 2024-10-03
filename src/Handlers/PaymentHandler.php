@@ -1,11 +1,11 @@
 <?php
 
-namespace Cone\SimplePay\Handlers;
+namespace FSG\SimplePay\Handlers;
 
-use Cone\SimplePay\Payloads\PaymentPayload;
-use Cone\SimplePay\Payloads\StatusPayload;
-use Cone\SimplePay\Support\Config;
-use Cone\SimplePay\Support\Request;
+use FSG\SimplePay\Payloads\PaymentPayload;
+use FSG\SimplePay\Payloads\StatusPayload;
+use FSG\SimplePay\Support\Config;
+use FSG\SimplePay\Support\Request;
 use Exception;
 
 class PaymentHandler extends Handler
@@ -35,18 +35,18 @@ class PaymentHandler extends Handler
         } elseif ($payload['e'] === 'CANCEL') {
             $this->order->set_status('pending');
 
-            wc_add_notice(__('Cancelled transaction.', 'cone-simplepay'), 'error');
+            wc_add_notice(__('Cancelled transaction.', 'free-simplepay'), 'error');
         } elseif ($payload['e'] === 'FAIL') {
             $this->order->set_status('failed');
 
             wc_add_notice(sprintf(
-                __('Failed transaction: %d. Please check if the given credentials are correct, or contact your card publisher.', 'cone-simplepay'),
+                __('Failed transaction: %d. Please check if the given credentials are correct, or contact your card publisher.', 'free-simplepay'),
                 $payload['t']
             ), 'error');
         } elseif ($payload['e'] === 'TIMEOUT') {
             $this->order->set_status('cancelled');
 
-            wc_add_notice(__('Expired transaction.', 'cone-simplepay'), 'error');
+            wc_add_notice(__('Expired transaction.', 'free-simplepay'), 'error');
         }
 
         $this->order->save();
@@ -75,22 +75,22 @@ class PaymentHandler extends Handler
             if ($request->valid()) {
                 $total = (float) $request->body('transactions.0.total');
 
-                $this->order->update_meta_data('_cone_simplepay_two_step_payment_reserved', $total);
+                $this->order->update_meta_data('_free_simplepay_two_step_payment_reserved', $total);
 
                 $this->order->add_order_note(sprintf(
-                    __('%d %s is reserved in SimplePay.', 'cone-simplepay'),
+                    __('%d %s is reserved in SimplePay.', 'free-simplepay'),
                     $total,
                     $this->order->get_currency()
                 ));
             }
         } catch (Exception $e) {
             $this->order->update_meta_data(
-                '_cone_simplepay_two_step_payment_reserved',
+                '_free_simplepay_two_step_payment_reserved',
                 $total = $this->order->get_total()
             );
 
             $this->order->add_order_note(sprintf(
-                __('%d %s is reserved in SimplePay (not precise).', 'cone-simplepay'),
+                __('%d %s is reserved in SimplePay (not precise).', 'free-simplepay'),
                 $total,
                 $this->order->get_currency()
             ));

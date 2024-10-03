@@ -1,11 +1,11 @@
 <?php
 
-namespace Cone\SimplePay\Payloads;
+namespace FSG\SimplePay\Payloads;
 
-use Cone\SimplePay\Plugin;
-use Cone\SimplePay\Support\Config;
-use Cone\SimplePay\Support\Hash;
-use Cone\SimplePay\Support\Str;
+use FSG\SimplePay\Plugin;
+use FSG\SimplePay\Support\Config;
+use FSG\SimplePay\Support\Hash;
+use FSG\SimplePay\Support\Str;
 use DateTime;
 use WC_Order;
 use WC_Order_Item;
@@ -191,7 +191,7 @@ abstract class PaymentPayload
      */
     public static function timeout(WC_Order $order): string
     {
-        $time = new DateTime(apply_filters('cone_simplepay_payment_timeout', '+30 minutes'), wp_timezone());
+        $time = new DateTime(apply_filters('free_simplepay_payment_timeout', '+30 minutes'), wp_timezone());
 
         return $time->format('c');
     }
@@ -204,6 +204,6 @@ abstract class PaymentPayload
      */
     public static function shouldBeTwoStep(WC_Order $order)
     {
-        return (bool) apply_filters('cone_simplepay_enable_two_step_payment', Config::isTwoStep(), $order);
+        return (bool) apply_filters('free_simplepay_enable_two_step_payment', Config::isTwoStep(), $order);
     }
 }

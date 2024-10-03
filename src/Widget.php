@@ -1,6 +1,6 @@
 <?php
 
-namespace Cone\SimplePay;
+namespace FSG\SimplePay;
 
 use WP_Widget;
 

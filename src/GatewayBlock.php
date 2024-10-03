@@ -1,6 +1,6 @@
 <?php
 
-namespace Cone\SimplePay;
+namespace FSG\SimplePay;
 
 use Automattic\WooCommerce\Blocks\Payments\Integrations\AbstractPaymentMethodType;
 
@@ -9,7 +9,7 @@ class GatewayBlock extends AbstractPaymentMethodType
     /**
      * The gateway instance.
      *
-     * @var \Cone\SimplePay\Gateway
+     * @var \FSG\SimplePay\Gateway
      */
     protected $gateway;
 

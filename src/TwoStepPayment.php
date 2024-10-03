@@ -1,11 +1,11 @@
 <?php
 
-namespace Cone\SimplePay;
+namespace FSG\SimplePay;
 
-use Cone\SimplePay\Payloads\FinishPayload;
-use Cone\SimplePay\Support\Config;
-use Cone\SimplePay\Support\Log;
-use Cone\SimplePay\Support\Request;
+use FSG\SimplePay\Payloads\FinishPayload;
+use FSG\SimplePay\Support\Config;
+use FSG\SimplePay\Support\Log;
+use FSG\SimplePay\Support\Request;
 use Exception;
 use WC_Order;
 
@@ -16,7 +16,7 @@ class TwoStepPayment
      *
      * @var string
      */
-    protected const ACTION = 'cone_simplepay_two_step_finish';
+    protected const ACTION = 'free_simplepay_two_step_finish';
 
     /**
      * Register the hooks.
@@ -38,8 +38,8 @@ class TwoStepPayment
      */
     public static function register($actions, $order)
     {
-        if ($order->get_meta('_cone_simplepay_two_step_payment_reserved') && ! $order->get_meta('_cone_simplepay_two_step_payment_finished')) {
-            $actions[static::ACTION] = __('Finish the two step SimplePay payment', 'cone-simplepay');
+        if ($order->get_meta('_free_simplepay_two_step_payment_reserved') && ! $order->get_meta('_free_simplepay_two_step_payment_finished')) {
+            $actions[static::ACTION] = __('Finish the two step SimplePay payment', 'free-simplepay');
         }
 
         return $actions;
@@ -63,21 +63,21 @@ class TwoStepPayment
             $request->send();
 
             if (! $request->valid()) {
-                throw new Exception(__('Request is invalid', 'cone-simplepay'));
+                throw new Exception(__('Request is invalid', 'free-simplepay'));
             }
 
-            if ($order->get_meta('_cone_simplepay_two_step_payment_reserved') && ! $order->get_meta('_cone_simplepay_two_step_payment_finished')) {
-                $order->update_meta_data('_cone_simplepay_two_step_payment_finished', date('c'));
+            if ($order->get_meta('_free_simplepay_two_step_payment_reserved') && ! $order->get_meta('_free_simplepay_two_step_payment_finished')) {
+                $order->update_meta_data('_free_simplepay_two_step_payment_finished', date('c'));
             }
 
             $order->add_order_note(
-                __('Two step SimplePay payment has been finished.', 'cone-simplepay')
+                __('Two step SimplePay payment has been finished.', 'free-simplepay')
             );
         } catch (Exception $e) {
             Log::info(sprintf('%s: %s', $e->getMessage(), $payload));
 
             $order->add_order_note(
-                __('Two step SimplePay payment request has been failed.', 'cone-simplepay')
+                __('Two step SimplePay payment request has been failed.', 'free-simplepay')
             );
         }
     }

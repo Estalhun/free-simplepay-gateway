@@ -1,8 +1,8 @@
 <?php
 
-namespace Cone\SimplePay\Handlers;
+namespace FSG\SimplePay\Handlers;
 
-use Cone\SimplePay\Support\Log;
+use FSG\SimplePay\Support\Log;
 
 class IPNHandler extends Handler
 {
@@ -16,7 +16,7 @@ class IPNHandler extends Handler
     {
         Log::info(sprintf(
             "%s\n%s",
-            __('IPN event was fired.', 'cone-simplepay'),
+            __('IPN event was fired.', 'free-simplepay'),
             json_encode($payload)
         ));
 
@@ -36,7 +36,7 @@ class IPNHandler extends Handler
             default:
                 Log::error(sprintf(
                     '%s %s',
-                    __('Unknown IPN status:', 'cone-simplepay'),
+                    __('Unknown IPN status:', 'free-simplepay'),
                     $payload['status']
                 ));
                 break;
@@ -52,8 +52,8 @@ class IPNHandler extends Handler
     {
         $this->order->payment_complete();
 
-        if ($this->order->get_meta('_cone_simplepay_two_step_payment_reserved') && ! $this->order->get_meta('_cone_simplepay_two_step_payment_finished')) {
-            $this->order->update_meta_data('_cone_simplepay_two_step_payment_finished', date('c'));
+        if ($this->order->get_meta('_free_simplepay_two_step_payment_reserved') && ! $this->order->get_meta('_free_simplepay_two_step_payment_finished')) {
+            $this->order->update_meta_data('_free_simplepay_two_step_payment_finished', date('c'));
 
             $this->order->save();
         }

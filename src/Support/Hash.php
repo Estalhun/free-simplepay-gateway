@@ -1,6 +1,6 @@
 <?php
 
-namespace Cone\SimplePay\Support;
+namespace FSG\SimplePay\Support;
 
 abstract class Hash
 {

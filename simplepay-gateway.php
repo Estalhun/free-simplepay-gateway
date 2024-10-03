@@ -2,13 +2,13 @@
 
 /**
  * Plugin Name:       Free OTP SimplePay Gateway for WooCommerce
- * Plugin URI:        https://simplepay.conedevelopment.com/
+ * Plugin URI:        https://github.com/Estalhun/free-simplepay-gateway
  * Description:       Free OTP SimplePay payment gateway integration for WooCommerce.
  * Version:           2.9.2
- * Author:            Cone Development
+ * Author:            Estalhun & Cyone64
  * License:           GPL-3.0
  * License URI:       https://opensource.org/license/gpl-3-0
- * Text Domain:       cone-simplepay
+ * Text Domain:       free-simplepay
  * Domain Path:       /languages/
  * Requires at least: 5.2
  * Tested up to:      6.4.1
@@ -21,8 +21,8 @@
 require_once __DIR__.'/autoload.php';
 
 // Register the activation and the deactivation hooks
-register_activation_hook(__FILE__, [Cone\SimplePay\Plugin::class, 'activate']);
-register_deactivation_hook(__FILE__, [Cone\SimplePay\Plugin::class, 'deactivate']);
+register_activation_hook(__FILE__, [FSG\SimplePay\Plugin::class, 'activate']);
+register_deactivation_hook(__FILE__, [FSG\SimplePay\Plugin::class, 'deactivate']);
 
 // Declare HPOS & Checkout Block compatibility
 add_action('before_woocommerce_init', function () {
@@ -33,4 +33,4 @@ add_action('before_woocommerce_init', function () {
 });
 
 // Boot the plugin
-Cone\SimplePay\Plugin::boot();
+FSG\SimplePay\Plugin::boot();

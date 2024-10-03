@@ -1,8 +1,8 @@
 <?php
 
-namespace Cone\SimplePay;
+namespace FSG\SimplePay;
 
-use Cone\SimplePay\Support\Config;
+use FSG\SimplePay\Support\Config;
 use WooCommerce;
 
 class Plugin
@@ -32,35 +32,37 @@ class Plugin
         add_action('plugins_loaded', [__CLASS__, 'bootGateway']);
         add_filter('plugin_action_links_'.static::SLUG, [__CLASS__, 'addLink']);
         add_filter('body_class', [__CLASS__, 'addBodyClass']);
-
+        /*
         add_action('admin_notices', function () {
             echo '<div class="notice notice-error is-dismissible"><p>';
-            _e('The OTP SimplePay Gateway plugin V3 has been released. This version will not get any updates in the future.', 'cone-simplepay');
+            _e('The OTP SimplePay Gateway plugin V3 has been released. This version will not get any updates in the future.', 'free-simplepay');
             echo '&nbsp;';
-            _e('Get your license:', 'cone-simplepay');
+            _e('Get your license:', 'free-simplepay');
             echo '&nbsp;';
             echo '<a href="https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce" target="_blank">https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce</a>.';
             echo '&nbsp;';
-            _e('If you have any questions contact us at: ', 'cone-simplepay');
+            _e('If you have any questions contact us at: ', 'free-simplepay');
             echo '<a href="mailto:support@conedevelopment.com">support@conedevelopment.com</a>.';
             echo '</p></div>';
         });
-
+        */
+        
+        /*
         add_action('after_plugin_row_simplepay-gateway/simplepay-gateway.php', function () {
             echo '<tr class="active is-uninstallable" data-slug data-plugin><td colspan="4">';
             echo '<div class="notice inline notice-error notice-alt"><p class="small">';
-            _e('The OTP SimplePay Gateway plugin V3 has been released. This version will not get any updates in the future.', 'cone-simplepay');
+            _e('The OTP SimplePay Gateway plugin V3 has been released. This version will not get any updates in the future.', 'free-simplepay');
             echo '&nbsp;';
-            _e('Get your license:', 'cone-simplepay');
+            _e('Get your license:', 'free-simplepay');
             echo '&nbsp;';
             echo '<a href="https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce" target="_blank">https://shop.conedevelopment.com/termekek/simplepay-x-woocommerce</a>.';
             echo '&nbsp;';
-            _e('If you have any questions contact us at: ', 'cone-simplepay');
+            _e('If you have any questions contact us at: ', 'free-simplepay');
             echo '<a href="mailto:support@conedevelopment.com">support@conedevelopment.com</a>.';
             echo '</p></div></td></tr>';
         });
-
-        load_plugin_textdomain('cone-simplepay', false, basename(dirname(__DIR__)).'/languages');
+        */
+        load_plugin_textdomain('free-simplepay', false, basename(dirname(__DIR__)).'/languages');
 
         Config::boot(get_option('woocommerce_simplepay-gateway_settings', []));
 
@@ -85,7 +87,7 @@ class Plugin
     public static function activate()
     {
         if (! class_exists(WooCommerce::class)) {
-            die(__('Please activate WooCommerce before using SimplePay Gateway!', 'cone-simplepay'));
+            die(__('Please activate WooCommerce before using SimplePay Gateway!', 'free-simplepay'));
         }
     }
 
@@ -137,6 +139,6 @@ class Plugin
      */
     public static function addBodyClass($classes)
     {
-        return array_merge($classes, ['cone-simplepay-gateway']);
+        return array_merge($classes, ['free-simplepay-gateway']);
     }
 }

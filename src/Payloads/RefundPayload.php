@@ -1,11 +1,11 @@
 <?php
 
-namespace Cone\SimplePay\Payloads;
+namespace FSG\SimplePay\Payloads;
 
-use Cone\SimplePay\Plugin;
-use Cone\SimplePay\Support\Config;
-use Cone\SimplePay\Support\Hash;
-use Cone\SimplePay\Support\Str;
+use FSG\SimplePay\Plugin;
+use FSG\SimplePay\Support\Config;
+use FSG\SimplePay\Support\Hash;
+use FSG\SimplePay\Support\Str;
 use WC_Order;
 
 abstract class RefundPayload

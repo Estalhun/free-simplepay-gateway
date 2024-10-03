@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.9.3 (2024-10-03)
+## v2.9.4 (2024-10-03)
 
 - Changed namespace from `Cone\SimplePay` to `FSG\SimplePay`
 - Changed text domain from `cone-simplepay` to `free-simplepay`

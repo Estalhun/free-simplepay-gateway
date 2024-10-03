@@ -118,7 +118,7 @@ class Gateway extends WC_Payment_Gateway
             $this->{$key} = $option;
         }
 
-        $this->method_description = __('OTP SimplePay Payment Gateway', 'free-simplepay');
+        $this->method_description = __('Free OTP SimplePay Payment Gateway', 'free-simplepay');
 
         if (isset($this->show_icon) && $this->show_icon === 'yes') {
             $this->icon = apply_filters('cone_simplepay_icon', plugin_dir_url(__DIR__).'images/icon.svg');

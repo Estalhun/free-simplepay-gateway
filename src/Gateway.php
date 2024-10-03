@@ -39,7 +39,7 @@ class Gateway extends WC_Payment_Gateway
      *
      * @var string
      */
-    public $method_description = 'OTP SimplePay Payment Gateway';
+    public $method_description = 'Free OTP SimplePay Payment Gateway';
 
     /**
      * The supported features.

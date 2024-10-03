@@ -4,7 +4,7 @@
  * Plugin Name:       Free OTP SimplePay Gateway for WooCommerce
  * Plugin URI:        https://github.com/Estalhun/free-simplepay-gateway
  * Description:       Free OTP SimplePay payment gateway integration for WooCommerce.
- * Version:           2.9.2
+ * Version:           2.9.3
  * Author:            Estalhun & Cyone64
  * License:           GPL-3.0
  * License URI:       https://opensource.org/license/gpl-3-0

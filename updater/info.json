@@ -1,7 +1,7 @@
 {
     "name": "Free SimplePay Gateway for WooCommerce",
     "slug": "simplepay-gateway-master/simplepay-gateway.php",
-    "version": "2.9.2",
+    "version": "2.9.3",
     "tested": "6.4.1",
     "requires": "5.2",
     "author": "Estalhun & Cyone64",

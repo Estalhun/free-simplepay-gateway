@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/simplepay-"
 "gateway\n"
 "POT-Creation-Date: 2024-03-13 12:17+0100\n"
-"PO-Revision-Date: 2024-10-03 11:37+0000\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2024-10-29 08:11+0000\n"
+"Last-Translator: Borsányi István\n"
 "Language-Team: Hungarian\n"
 "Language: hu-HU\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: languages\n"
+"X-Loco-Version: 2.6.11; wp-6.6.2"
 
 #: src/Handlers/PaymentHandler.php:93
 #, php-format
@@ -63,7 +64,7 @@ msgstr "Kétlépcsős fizetés engedélyezése"
 
 #. Author of the plugin
 msgid "Estalhun & Cyone64"
-msgstr ""
+msgstr "Estalhun & Cyone64"
 
 #: includes/fields.php:106 includes/fields.php:120
 msgid "EUR Merchant ID"
@@ -95,21 +96,21 @@ msgstr "Kétlépcsős SimplePay tranzakció lezárása"
 
 #. Name of the plugin
 msgid "Free OTP SimplePay Gateway for WooCommerce"
-msgstr ""
+msgstr "Ingyenes OTP SimplePay Gateway a WooCommerce számára"
 
 #: src/Gateway.php:121
-#, fuzzy
 #| msgid "OTP SimplePay Payment Gateway"
 msgid "Free OTP SimplePay Payment Gateway"
-msgstr "OTP SimplePay Fizetési Kapu"
+msgstr "Ingyenes OTP SimplePay Fizetési Kapu"
 
 #. Description of the plugin
 msgid "Free OTP SimplePay payment gateway integration for WooCommerce."
 msgstr ""
+"Ingyenes OTP SimplePay fizetési átjáró integráció a WooCommerce számára."
 
 #. URI of the plugin
 msgid "https://github.com/Estalhun/free-simplepay-gateway"
-msgstr ""
+msgstr "https://github.com/Estalhun/free-simplepay-gateway"
 
 #: includes/fields.php:72 includes/fields.php:86
 msgid "HUF Merchant ID"

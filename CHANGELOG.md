@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.9.6 (2024-10-29)
+
+- Updated po files.
+
 ## v2.9.4 (2024-10-03)
 
 - Changed namespace from `Cone\SimplePay` to `FSG\SimplePay`

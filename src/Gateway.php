@@ -20,6 +20,40 @@ use WC_Payment_Gateway;
 
 class Gateway extends WC_Payment_Gateway
 {
+    // Az összes lehetséges konfigurációs beállítás deklarálása
+    protected $sandbox;
+    protected $debug;
+    protected $two_step;
+    protected $merchant;
+    protected $secret_key;
+    protected $show_icon;
+            
+    // Pénznem-specifikus beállítások
+    protected $huf_merchant;
+    protected $huf_secret_key;
+    protected $huf_sandbox_merchant;
+    protected $huf_sandbox_secret_key;
+    protected $eur_merchant;
+    protected $eur_secret_key;
+    protected $eur_sandbox_merchant;
+    protected $eur_sandbox_secret_key;
+    protected $usd_merchant;
+    protected $usd_secret_key;
+    protected $usd_sandbox_merchant;
+    protected $usd_sandbox_secret_key;
+    
+    // A Config osztályban látható további beállítások
+    protected $notification_settings;
+    protected $sandbox_settings;
+    protected $sanbox_settings;
+    protected $two_step_settings;
+    protected $prefix;
+    protected $icon_settings;
+    protected $huf_settings;
+    protected $eur_settings;
+    protected $usd_settings;
+    protected $debug_settings;
+
     /**
      * The ID.
      *
@@ -114,8 +148,19 @@ class Gateway extends WC_Payment_Gateway
      */
     protected function setOptions()
     {
-        foreach (Config::get() as $key => $option) {
-            $this->{$key} = $option;
+        
+        $options = Config::get();
+        
+        // Biztonságos tulajdonság beállítás ellenőrzéssel
+        foreach ($options as $key => $option) {
+            if (property_exists($this, $key)) {
+                $this->{$key} = $option;
+            } else {
+                // Naplózzuk az ismeretlen kulcsokat debug célból
+                if (Config::isDebug()) {
+                    error_log("Unknown config key in Gateway: {$key}");
+                }
+            }
         }
 
         $this->method_description = __('Free OTP SimplePay Payment Gateway', 'free-simplepay');
